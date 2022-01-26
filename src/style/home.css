@@ -1,0 +1,87 @@
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.home-content {
+    animation: fade-page .8s ease-in;
+}
+
+.logo-container {
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    height: fit-content;
+}
+.logo {
+    transition: 0.8s;
+    position: fixed;
+    z-index: 99;
+}
+.logo:hover {
+    transition: 0.8s;
+    transform: translateY(-2px);
+    opacity: .8;
+}
+/* Selected Work */
+.image-work {
+    position: fixed;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    opacity: 0.4;
+}
+.selected-work-container {
+    position: absolute;
+    overflow-y: auto;
+    height: 30%;
+    margin: auto;
+    top: 35%;
+    width: 100%;
+}
+.selected-work-container .detail-link {
+    text-decoration: none;
+}
+
+.selected-work-container .work-list {
+    transition: 0.8s;
+    margin-left: 7.5%;
+    letter-spacing: 5px;
+    line-height: 3rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: white;
+    opacity: .1;
+}
+.selected-work-container .current {
+    transition: 0.8s;
+    opacity: 1;
+}
+.selected-work-container::-webkit-scrollbar {
+    width: 0px;
+}
+.selected-work-container .detail-link:hover + .black-screen {
+    opacity: 0;
+}
+
+@keyframes fade-in-out {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .25;
+    }
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Source Sans Pro', sans-serif; */
+
+:root { 
+  --black-1: #171717;
+}
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--black-1);
+}
+body::-webkit-scrollbar-thumb {
+  background: white;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--black-1);
+}
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.navbar {
+  position: fixed;
+  top: 2%;
+  right: 7.5%;
+  width: fit-content;
+  z-index: 100;
+}
+.navbar ul {
+  width: fit-content;
+  list-style-type: none;
+}
+.navbar ul li a {
+  font-size: 1rem;
+  line-height: 20px;
+  color: white;
+  -webkit-text-stroke: .25px var(--black-1);
+  text-decoration: none;
+  text-align: right;
+}
+.navbar ul li a p {
+  transition: 0.5s;
+}
+.navbar ul li a p:hover {
+  transition: 0.5s;
+  transform: translateX(-3px);
+  opacity: .5;
+}
+#current { 
+  font-weight: bold;
+}
+.navbar .hamburger {
+  transition: 0.8s;
+  cursor: pointer;
+  opacity: 1;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 0;
+  width: fit-content;
+  margin-left: 55%;
+}
+.hamburger:hover {
+  transition: 0.8s;
+  opacity: .5;
+}
+
+.rotate-ham {
+  opacity: 1;
+  transform: rotate(180deg) scale(0.8);
+  background-color: white;
+
+}
+.nav-links {
+  transition: .8s;
+  transform: translateX(0px);
+}
+
+@keyframes fade-page {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar ul li a {
+    font-size: 0.8rem;
+  }
+  .display-none {
+    transition: .8s;
+    transform: translateX(400%);
+  }
+  .box-white {
+    opacity: 1;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+  .box-black {
+    opacity: 1;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+}
