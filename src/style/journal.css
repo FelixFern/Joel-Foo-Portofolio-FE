@@ -74,3 +74,14 @@
     background-color: black;
     color: white;
 }
+@media only screen and (max-width: 1000px) {
+    .journal-content h1 {
+        padding-top: 20%;
+    }
+    .journal h1 {
+        padding-top: 5%;
+    }
+    .journal {
+        padding-bottom: 30%;
+    }
+}
