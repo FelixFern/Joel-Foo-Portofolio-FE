@@ -7,7 +7,6 @@ import { useQuery, gql } from '@apollo/client'
 import '../style/journal.css'
 import LoadingPage from './LoadingPage'
 
-
 const JOURNALS = gql` 
     query getJournals { 
         journals {
